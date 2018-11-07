@@ -4,63 +4,73 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - StudentManager</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    
+    </style>
 </head>
 <body>
-    <div class="row">
-        <div class="col-lg-2 bg-dark" style="height:1000px">
-            <div style="height:150px">
-                
-            </div>
 
-            <div>
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">First item <span class="badge badge-primary badge-pill">12</span></a>
-                    <a href="#" class="list-group-item list-group-item-action">Second item</a>
-                    <a href="#" class="list-group-item list-group-item-action">Third item</a>
+    <div class="container-fluid">
+        <div class="row content">
+            
+            <div class="col-sm-2 sidenav hidden-xs">
+                <div class="well" style="margin-top:20px;">
+                    <h2>Logo</h2>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#section1">Dashboard</a></li>
+                        <li><a href="#section2">section2</a></li>
+                        <li><a href="#section3">section3</a></li>
+                        <li><a href="#section3">section3</a></li>
+                    </ul><br>
+                </div>
+            </div>
+            <br>
+
+            <div class="col-sm-10">
+                <div class="well">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="#"><img src="https://yt3.ggpht.com/a-/AN66SAzReYMJoqY0o8hgKYUGP2mKt_M3ITfUA2T0Ug=s900-mo-c-c0xffffffff-rj-k-no" width="44" class="img-circle" /> Charlie Puth </a>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div style="float:right">
+                                <a class="btn btn-default" href="#"> Language </a>
+                                <a class="btn btn-danger" href="#"> Log Out <span class="glyphicon glyphicon-log-out"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="well">
+                    <div class="container body-content">
+                        @RenderBody()
+                        <hr />
+                        <footer>
+                            <p>&copy; 2018 - StudentManager</p>
+                        </footer>
+                    </div>
+
+                    @RenderSection("Scripts", required: false)
                 </div>
             </div>
         </div>
-        <div class="col-lg-10">
-            <div class="container">
-                <hr />
-                <div class="row">
-                    <div class="col-lg-8">
-                        <ul class="nav">
-                            <li class="nav-item" style="margin-top:-5px;">
-                                <img src="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.0-9/33304106_1079897518824459_3394318404990009344_n.jpg?_nc_cat=107&_nc_ht=scontent.fhan5-6.fna&oh=2bdf5876520194abf4f68e3873c84a4d&oe=5C43BB3C" height="50" width="50" class="rounded-circle" />
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Le Dang Nhan</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <ul class="nav">
-                            <li></li>
-                            <li></li>
-                            <li>
-                                <a class="nav-link" href="#">Log Out<span class="glyphicon glyphicon-star" aria-hidden="true"></span></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <hr />
-                @RenderBody()
-            </div>
-        </div>
-
     </div>
 
-    <partial name="_CookieConsentPartial" />
-
-    
-
-    
 </body>
 </html>

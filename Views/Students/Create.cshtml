@@ -6,11 +6,10 @@
 
 <h2>Create</h2>
 
-<h4>Student</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+    <form asp-action="Create">
+        <div class="col-lg-5">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
@@ -32,6 +31,9 @@
                 <input asp-for="Phone" class="form-control" />
                 <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
+            
+        </div>
+        <div class="col-lg-5">
             <div class="form-group">
                 <label asp-for="Gender" class="control-label"></label>
                 <select asp-for="Gender" class="form-control">
@@ -56,16 +58,15 @@
                 <input asp-for="AvatarPicture" class="form-control" />
                 <span asp-validation-for="AvatarPicture" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div style="float:left">
+                    <input type="submit" value="Create" class="btn btn-success" />
+                    <a class="btn btn-default" asp-action="Index">Cancel</a>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
